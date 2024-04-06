@@ -14,11 +14,22 @@ docker compose --build
 ## start container only
 docker compose up -d
 
+## stop and remove container
+docker compose down
+
 ## check with ps
 docker compose ps
 ```
 ### 2. Debug FFmpeg
 
+0. Download FFmpeg source code to `src/ffmpeg`
+    Clone n6.1.1(tag) version for example, to check all versions on [Official FFmpeg repo](https://github.com/FFmpeg/FFmpeg/tags)
+
+    > note: target folder MUST be `src/ffmpeg`
+
+    ```bash
+    git clone -b n6.1.1 https://git.ffmpeg.org/ffmpeg.git ./src/ffmpeg
+    ```
 1. Attach docker container created in last step in `VSCode`
    1. Open `/app` folder as project root directory
 2. Install VSCode extensions in dev container
