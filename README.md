@@ -1,7 +1,6 @@
-## Debug FFmpeg
+## Debug FFmpeg in VSCode
 
 ### 1. Build & start docker container for building FFmpeg
-
 
 ```bash
 ## build docker image with Dockerfile, and start a container of this image
@@ -20,12 +19,13 @@ docker compose ps
 ```
 ### 2. Debug FFmpeg
 
-0. Install VSCode extensions
+1. Attach docker container created in last step in `VSCode`
+   1. Open `/app` folder as project root directory
+2. Install VSCode extensions in dev container
    1. Install `C/C++` VSCode extension (for debugging)
    2. Install `clangd` VSCode extension (for code navigation)
-1. Attach docker container created in last step in `VSCode`
-2. Build FFmpeg
+3. Build FFmpeg
     ```bash
     /app/src/build.sh
    ```
-3. Debug
+4. Debug -> "Debug ffmpeg_g"

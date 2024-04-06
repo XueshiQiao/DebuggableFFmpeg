@@ -2,13 +2,12 @@ version: '3.8'
 
 services:
   ffmpeg-dev:
-    container_name: ffmpeg-dev-3
+    container_name: ffmpeg-dev
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
       - ./.vscode-for-docker:/app/.vscode
-      #- ./src:/app/src
     working_dir: /app
     tty: true
 volumes:
