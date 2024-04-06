@@ -10,9 +10,23 @@
             "request": "launch",
             "name": "Debug ffmpeg_g",
             "program": "${workspaceFolder}/ffmpeg-build/ffmpeg_g",
-            "args": [],
+            "args": [
+                "-i",
+                "${workspaceFolder}/resources/12902-242487547_medium.mp4",
+                "-c:v",
+                "libvpx-vp9",
+                "-quality",
+                "realtime",
+                "-cpu-used",
+                "8",
+                "-b:v",
+                "3M",
+                "-c:a",
+                "libvorbis",
+                "${workspaceFolder}/resources/12902-242487547_medium.webm"
+            ],
             "cwd": "${workspaceFolder}",
-            "miDebuggerPath": "/usr/bin/gdb",
+            "miDebuggerPath": "/usr/bin/gdb"
             //"stopOnEntry": true,
         }
     ]
