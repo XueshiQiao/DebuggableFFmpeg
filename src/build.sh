@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /app/src/ffmpeg-build
+cd /app/ffmpeg-build
 
 make clean
 

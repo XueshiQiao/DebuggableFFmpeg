@@ -4,8 +4,9 @@ RUN apt-get update && apt-get install -y \
     autoconf automake \
     build-essential \
     pkg-config \
-    yasm nasm \
-    bear \
+    yasm nasm
+
+RUN apt-get install -y \
     libx264-dev \
     libx265-dev libnuma-dev \
     libvpx-dev \
@@ -14,9 +15,11 @@ RUN apt-get update && apt-get install -y \
 
 # gdb: debug
 # clangd: code navigation, work with clangd vscode extension
+# bear: generate compile_commands.json for clangd
 RUN apt-get install -y \
     gdb \
-    clangd
+    clangd \
+    bear
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
