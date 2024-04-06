@@ -30,13 +30,14 @@ docker compose ps
     ```bash
     git clone -b n6.1.1 https://git.ffmpeg.org/ffmpeg.git ./src/ffmpeg
     ```
-1. Attach docker container created in last step in `VSCode`
-   1. Open `/app` folder as project root directory
-2. Install VSCode extensions in dev container
-   1. Install `C/C++` VSCode extension (for debugging)
-   2. Install `clangd` VSCode extension (for code navigation)
-3. Build FFmpeg
+1. Connect docker container in VSCode (2 options, either 1 or 2 is OK)
+   1. Dev Container: Reopen in dev container within VSCode
+   2. Remote Explorer: Attach docker container created in last step in `VSCode` and then Open `/app` folder as project root directory
+      1. Install VSCode extensions in dev container
+         1. Install `C/C++` VSCode extension (for debugging)
+         2. Install `clangd` VSCode extension (for code navigation)
+2. Build FFmpeg
     ```bash
     /app/src/build.sh
    ```
-4. Debug -> "Debug ffmpeg_g"
+3. Debug -> "Debug ffmpeg_g"
